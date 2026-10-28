@@ -19,13 +19,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Build with Gradle
+      - name: Setup Gradle 8.4
         uses: gradle/actions/setup-gradle@v3
         with:
-          arguments: assembleDebug
+          gradle-version: '8.4'
+
+      - name: Fix Manifest & Build Debug APK
+        run: |
+          sed -i 's/package="vn.custom.vietvoicetv"//g' app/src/main/AndroidManifest.xml
+          gradle assembleDebug --stacktrace
 
       - name: Upload Compiled APK
         uses: actions/upload-artifact@v4
