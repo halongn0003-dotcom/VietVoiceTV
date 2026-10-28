@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    android:padding="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cấu hình VietVoice TV (Dành cho TV Xiaomi Nội Địa)"
+        android:textColor="#38BDF8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nhập Groq API Key (miễn phí tại console.groq.com) hoặc Gemini API Key để nhận diện giọng nói tiếng Việt siêu tốc không cần GMS:"
+        android:textColor="#CBD5E1"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etApiKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#1E293B"
+        android:hint="gsk_... (Groq API Key) hoặc AIza... (Gemini Key)"
+        android:padding="14dp"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#64748B"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSaveKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2563EB"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Lưu cấu hình"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnTestVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#10B981"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Thử Giọng Nói Ngay"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Các câu lệnh hỗ trợ sẵn:
+• Mở + Tên ứng dụng (Mở TV360, Mở FPT Play, Mở Cốc Cốc, Mở TikTok, Mở YouTube...)
+• Mở nhạc / Tìm kiếm: (Ví dụ: 'Mở nhạc Remix', 'Karaoke nhạc trẻ' -> Tự mở YouTube/SmartTube)
+• Chuyển kênh truyền hình: ('Kênh VTV1', 'Kênh VTV3', 'VTV2'...)
+• Tra cứu trực tiếp trên màn hình: 'Giá vàng hôm nay', 'Giá dầu hôm nay vùng 2', 'Giá xăng hôm nay'"
+        android:textColor="#94A3B8"
+        android:textSize="15sp" />
+
+</LinearLayout>
